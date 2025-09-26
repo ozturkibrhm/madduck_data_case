@@ -41,7 +41,7 @@ It takes an **App List** and a **Deal List** from an Excel file, fetches metadat
 | 🖥️ Argparse       | CLI argument parsing |
 
 
-📁 Folder / File Structure
+## 📁 Folder / File Structure
 
 📦 madduck_data_case
  ┣ 📜 script.py              # Main Python script
@@ -49,13 +49,13 @@ It takes an **App List** and a **Deal List** from an Excel file, fetches metadat
  ┣ 📑 filtered_leads.csv     # Output (filtered apps)
 
 
-🚀 Installation & Usage
+## 🚀 Installation & Usage
 
-Run the script from the terminal:
+## Run the script from the terminal:
 
 python script.py --input "Madduck Data Case Study Data Files.xlsx" --output "filtered_leads.csv"
 
-Parameters
+## Parameters
 --input → Path to the Excel file (App List & Deal List)
 
 --output → Output CSV file (default: filtered_leads.csv)
