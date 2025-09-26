@@ -1,17 +1,35 @@
-📊 Madduck Data Case Study – App Store Lead Filtering Script
+# 📊 Madduck Data Case Study – App Store Lead Filtering Script  
 
-💡 Filter App Store data • 🎯 Exclude Deal List • ⏳ Check recent updates • 👨‍💻 Deduplicate apps by developer
+💡 **Filter App Store data • 🎯 Exclude Deal List apps • ⏳ Check release & update dates • 👨‍💻 Deduplicate by developer**  
 
-📌 About the Project
+---
 
-This project provides a Python script designed to process App Store data and make it suitable for integration into a CRM system.
-The script ingests an App List and a Deal List, fetches metadata from the App Store API, applies filtering rules, and outputs the final result as a CSV file.
+## 📌 About the Project  
 
-✅ Fetch metadata via App Store API
-✅ Exclude apps listed in the Deal List
-✅ Apply release date & last update date filters
-✅ Deduplicate results by developer (only one app per developer)
-✅ Reusable command-line script with argparse
+This project contains a Python script that processes App Store metadata and filters apps to make them suitable for CRM lead generation.  
+It takes an **App List** and a **Deal List** from an Excel file, fetches metadata from the App Store API, applies filtering rules, and saves the results into a CSV file.  
+
+> ✅ Fetch metadata from App Store API  
+> ✅ Exclude apps already in Deal List  
+> ✅ Filter by Release Date and Last Update Date  
+> ✅ Deduplicate apps so only one app per developer remains  
+> ✅ Reusable script with `argparse` for terminal execution  
+
+---
+
+## 🔧 Technologies Used  
+
+| Technology/Library  | Purpose |
+|---------------------|---------|
+| 🐍 Python           | Development language |
+| 📑 Pandas           | Data processing |
+| 🌍 Requests         | API requests |
+| ⏱️ Datetime         | Date handling |
+| 🖥️ Argparse         | CLI parameter handling |
+
+---
+
+## 📁 Project Structure  
 
 🔧 Tech Stack
 | Technology/Library | Purpose              |
@@ -38,7 +56,6 @@ Run the script from the terminal:
 python script.py --input "Madduck Data Case Study Data Files.xlsx" --output "filtered_leads.csv"
 
 Parameters
-
 --input → Path to the Excel file (App List & Deal List)
 
 --output → Output CSV file (default: filtered_leads.csv)
