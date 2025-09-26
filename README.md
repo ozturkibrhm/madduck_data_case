@@ -61,6 +61,7 @@ python script.py --input "Madduck Data Case Study Data Files.xlsx" --output "fil
 --output → Output CSV file (default: filtered_leads.csv)
 
 python script.py --input "Madduck Data Case Study Data.xlsx" --output "result.csv"
+
 python script.py --input "another_file.xlsx" --output "filtered.csv"
 
 
