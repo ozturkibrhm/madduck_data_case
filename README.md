@@ -1,62 +1,49 @@
-# 📊 Madduck Data Case Study – App Store Lead Filtering Script  
+📊 Madduck Data Case Study – App Store Lead Filtering Script
 
-💡 **App Store verilerini filtrele • 🎯 Deal List hariç tut • ⏳ Son güncellemeleri kontrol et • 👨‍💻 Tekilleştirilmiş geliştirici bazlı uygulama seç**  
+💡 Filter App Store data • 🎯 Exclude Deal List • ⏳ Check recent updates • 👨‍💻 Deduplicate apps by developer
 
----
+📌 About the Project
 
-## 📌 Proje Hakkında  
+This project provides a Python script designed to process App Store data and make it suitable for integration into a CRM system.
+The script ingests an App List and a Deal List, fetches metadata from the App Store API, applies filtering rules, and outputs the final result as a CSV file.
 
-Bu proje, App Store’dan alınan uygulama verilerini **CRM sistemine uygun hale getirmek** için geliştirilmiş bir Python scripti içerir.  
-Script, verilen App List ve Deal List üzerinden uygulamaları çekerek **filtreleme kurallarına göre eleme yapar** ve sonuçları CSV dosyasına kaydeder.  
+✅ Fetch metadata via App Store API
+✅ Exclude apps listed in the Deal List
+✅ Apply release date & last update date filters
+✅ Deduplicate results by developer (only one app per developer)
+✅ Reusable command-line script with argparse
 
-> ✅ App Store API’den metadata çekme  
-> ✅ Deal List’teki uygulamaları hariç tutma  
-> ✅ Release Date ve Last Update Date filtreleri  
-> ✅ Her geliştiriciden yalnızca 1 uygulama seçme (tekilleştirme)  
-> ✅ Yeniden kullanılabilir terminal scripti (`argparse` ile)  
+🔧 Tech Stack
+| Technology/Library | Purpose              |
+| ------------------ | -------------------- |
+| 🐍 Python          | Development language |
+| 📑 Pandas          | Data processing      |
+| 🌍 Requests        | App Store API calls  |
+| ⏱️ Datetime        | Date filtering       |
+| 🖥️ Argparse       | CLI argument parsing |
 
----
 
-## 🔧 Kullanılan Teknolojiler  
+📁 Folder / File Structure
 
-| Teknoloji/Kütüphane | Açıklama |
-|---------------------|----------|
-| 🐍 Python           | Geliştirme dili |
-| 📑 Pandas           | Veri işleme |
-| 🌍 Requests         | App Store API çağrıları |
-| ⏱️ Datetime         | Tarih filtreleme |
-| 🖥️ Argparse         | Terminal parametre desteği |
-
----
-
-## 📁 Klasör / Dosya Yapısı  
 📦 madduck_data_case
-┣ 📓 script.py # Ana Python scripti
-┣ 📊 M
-┣ 📑 filtered_leads.csv # Çıktı (filtrelenmiş uygulamalar)
+ ┣ 📜 script.py              # Main Python script
+ ┣ 📊 Madduck Data Case.xlsx # Input file (App List & Deal List)
+ ┣ 📑 filtered_leads.csv     # Output (filtered apps)
 
 
----
+🚀 Installation & Usage
 
-## 🚀 Kurulum ve Çalıştırma  
+Run the script from the terminal:
 
-🔹 Gerekli paketleri yükleyin:  
-```bash
-pip install pandas requests openpyxl
-
-🔹 Script’i terminalden şu şekilde çalıştırabilirsiniz:
 python script.py --input "Madduck Data Case Study Data Files.xlsx" --output "filtered_leads.csv"
 
-Parametreler
+Parameters
 
---input→ Excel dosya yolu
+--input → Path to the Excel file (App List & Deal List)
 
---output → Çıktı CSV dosyası (varsayılan: filtered_leads.csv)
+--output → Output CSV file (default: filtered_leads.csv)
 
-Örnekler:
-python script.py --input "Madduck Data Case Study Data.xlsx" --output "sonuc.csv"
-python script.py --input "baska_dosya.xlsx" --output "filtered.csv"
-
-
+python script.py --input "Madduck Data Case Study Data.xlsx" --output "result.csv"
+python script.py --input "another_file.xlsx" --output "filtered.csv"
 
 
