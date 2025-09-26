@@ -47,8 +47,7 @@ It takes an **App List** and a **Deal List** from an Excel file, fetches metadat
  ┣ 📜 script.py              # Main Python script
  ┣ 📊 Madduck Data Case.xlsx # Input file (App List & Deal List)
  ┣ 📑 filtered_leads.csv     # Output (filtered apps)
- 
- ┣ 📑 DataCase_Task2_Task3_Answers.pdf
+ ┣ 📁 DataCase_Task2_Task3_Answers.pdf
 
 ## 🚀 Installation & Usage
 
